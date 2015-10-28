@@ -1,0 +1,88 @@
+/*! Made with Bones: http://themble.com/bones :) */
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+//Compass
+  @import "compass/css3/background-size";
+  @import "compass/css3/transition";
+  @import "compass/css3/transform";
+  @import "compass/utilities/general/reset";
+  @import "compass/css3/box-shadow";
+  @import "compass/css3/border-radius";
+  @import "compass/css3/box-sizing";
+  @import "compass/css3/opacity";
+  @import "compass/css3/filter";
+  @import "compass/css3/images";
+
+  //Mixin
+  @import "mixin/retina-background-image";
+  @import "mixin/retina-sprites";
+
+  //Susy + BreakPoint
+  @import "susy";
+  @import "breakpoint";
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "components/normalize";
+// Sass variables
+@import "components/variables";
+// typography
+@import "components/typography";
+// Sass functions //Not in Use
+// @import "components/functions";
+// import mixins
+@import "components/mixins";
+
+@import "components/grid";
+
+// Components
+@import "components/components";
+// alert boxes
+@import "components/alerts";
+// buttons
+@import "components/buttons";
+// forms (inputs & labels)
+@import "components/forms";
+@import "components/icons";
+/*********************
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*********************/
+
+// styles in base.scss
+@import "base";
+@import "nav";
+@import "main";
+@import "comments";
+@import "sidebar";
+
+
+//Vendor
+@import "vendor/slidebars";
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+
+	// styles in print.scss
+	@import "partials/print";
+
+}

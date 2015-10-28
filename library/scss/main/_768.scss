@@ -1,0 +1,15 @@
+@include susy-breakpoint(768px, 12) {
+	.home {
+		/* home page */
+		//Masonry Setting
+		.post {
+			width: 48%;
+		}
+		.post-sizing {
+			width: 48%;
+		}
+		.post-gutter {
+			width: 4%;
+		}
+	}
+}

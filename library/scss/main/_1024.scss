@@ -1,0 +1,30 @@
+@include susy-breakpoint(1024px, 12) {
+	.home {
+		/* home page */
+		//Masonry Setting
+		.post {
+			width: 32%;
+		}
+		.post-sizing {
+			width: 32%;
+		}
+		.post-gutter {
+			width: 2%;
+		}
+	}
+	//Single
+	.single, .page {
+		.entry-content {
+			.main-content {
+				width: 1000px;
+				margin: 0 auto;
+			}
+			p {
+				padding: 0 150px;
+			}
+			h1,h2,h3,h4,h5 {
+				padding: 0 150px;
+			}
+		}
+	}
+}

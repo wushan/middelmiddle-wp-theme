@@ -1,0 +1,73 @@
+@include susy-breakpoint(1024px, 12) {
+	.header {
+
+	}
+
+	#brand {
+		text-align: center;
+		font-size: 3em;
+	}
+	.blog-description {
+		text-align: center;
+	}
+	#inner-header {
+		margin-bottom: 0;
+		#navigator {
+			@include full;
+			margin-top: 2em;
+			text-align: center;
+			border-top: 1px solid $light-gray;
+			border-bottom: 1px solid $light-gray;
+		}
+		#brand {
+			@include full;
+
+		}
+	}
+	//Hide Mobile Menu Trigger
+	.menu-trigger {
+		display: none;
+	}
+	//Nav
+	.nav {
+		a {
+			display: block;
+			text-decoration: none;
+		}
+
+		&.top-nav {
+			display: block;
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				a {
+					color: $dark-gray;
+					&:after {
+						content: '/';
+						display: inline-block;
+						vertical-align: baseline;
+						padding: 0 1em;
+						color: $dark-gray;
+					}
+					&:hover {
+						color: $bones-pink;
+					}
+				}
+				&:last-child {
+					a {
+						&:after {
+							content: '';
+							display: inline-block;
+							vertical-align: baseline;
+							padding: 0 1em;
+							color: $dark-gray;
+						}
+					}		
+				}
+			}
+		}
+		&.slide-nav {
+
+		}
+	}
+}
